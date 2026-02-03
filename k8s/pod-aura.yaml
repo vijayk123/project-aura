@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+    name: project-aura-pod
+    labels: 
+      app: aura 
+spec:
+  containers:
+     - name : aura-container
+       image: project-aura-app:2.0
+       imagePullPolicy: IfNotPresent
+       ports: 
+        -  containerPort: 8080
