@@ -10,8 +10,10 @@ def home():
 
 @app.route("/health")
 def health():
-    return {"status": "UP"}, 200
-
+      return jsonify({
+        "status": "UP",
+        "version": "v2"
+    })
 @app.route("/region")
 def region():
     region = os.getenv("REGION", "unknown")
