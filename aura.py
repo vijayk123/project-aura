@@ -12,7 +12,7 @@ def home():
 def health():
       return jsonify({
         "status": "UP",
-        "version": "v2"
+        "version": "v3"
     })
 @app.route("/region")
 def region():
